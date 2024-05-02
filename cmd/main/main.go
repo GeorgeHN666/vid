@@ -2,11 +2,20 @@ package main
 
 import (
 	"log"
+	"os"
+	"strconv"
 	"video-streaming/server"
 )
 
 func main() {
 
-	log.Fatal(server.StartServer(6354, 45))
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "3000"
+	}
+
+	p, _ := strconv.Atoi(port)
+
+	log.Fatal(server.StartServer(p, 45))
 
 }
