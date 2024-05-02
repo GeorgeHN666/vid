@@ -7,6 +7,6 @@ import (
 
 func main() {
 
-	log.Fatal(server.StartServer(3000, 45))
+	log.Fatal(server.StartServer(6354, 45))
 
 }
