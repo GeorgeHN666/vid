@@ -7,7 +7,7 @@ type Post struct {
 	UserID      primitive.ObjectID `json:"user_id" bson:"user_id"`
 	Title       string             `json:"title" bson:"title"`
 	Description string             `json:"descrition" bson:"description"`
-	LibraryK    string             `json:"libraryk" bson:"libraryk"`
-	APIK        string             `json:"APIK" bson:"APIK"`
-	Content     []VideoModel       `json:"content" bson:"content"`
+	LibraryKey  string             `json:"librarykey" bson:"librarykey"`
+	LibraryID   int64              `json:"libraryID" bson:"libraryID"`
+	Content     []*VideoModel      `json:"content" bson:"content"`
 }

@@ -14,5 +14,10 @@ func RouteHandler() http.Handler {
 	mux.Post("/user", handlers.InsertUser)
 	mux.Post("/login", handlers.LoginUser)
 
+	mux.Post("/newPost", handlers.CreatePost)
+	mux.Get("/post", handlers.GetPost)
+	mux.Delete("/post", handlers.DeletePost)
+	mux.Get("/feed", handlers.GetFeed)
+
 	return mux
 }
